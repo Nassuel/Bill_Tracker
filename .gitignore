@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ── Node / Next.js ────────────────────────────────────────────────────────────
+dashboard/node_modules/
+dashboard/.next/
+dashboard/.env.local
+
+# ── Bill data (contains scraped amounts; keep out of version control) ─────────
+data/bills.json
