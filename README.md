@@ -59,25 +59,25 @@ balance from the page directly.
 ```bash
 cd scraper
 python -m venv .venv && source .venv/bin/activate   # or .venv\Scripts\activate on Windows
-pip install -r requirements.txt
+pip install -e .
 ```
 
 Run a single provider (visible browser, good for debugging selectors):
 
 ```bash
-python main.py pse_gas --no-headless
+bill-tracker pse_gas --no-headless
 ```
 
 Run all providers headlessly and save to `data/bills.json`:
 
 ```bash
-python main.py
+bill-tracker
 ```
 
 List available provider IDs:
 
 ```bash
-python main.py --list
+bill-tracker --list
 ```
 
 ### 3. Dashboard
@@ -121,7 +121,7 @@ Bill_Tracker/
 ├── data/
 │   └── bills.json                # scraped bill data (gitignored)
 ├── scraper/
-│   ├── requirements.txt
+│   ├── pyproject.toml
 │   ├── main.py                   # CLI runner
 │   ├── api.py                    # FastAPI server (for UI refresh)
 │   └── scrapers/

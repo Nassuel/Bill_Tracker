@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bill-tracker-scraper"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "selenium==4.27.1",
+    "webdriver-manager==4.0.2",
+    "fastapi==0.115.5",
+    "uvicorn[standard]==0.32.1",
+    "python-dotenv==1.0.1",
+    "requests==2.32.3",
+]
+
+[project.scripts]
+bill-tracker = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scrapers"]
